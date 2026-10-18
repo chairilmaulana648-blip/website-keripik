@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keripik Gurih & Renyah</title>
+  
+  <!-- Import Font Google: Fredoka (Judul) & Nunito (Teks Isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Memanggil File CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo">DapurHarni<span>.id</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Beranda</a></li>
+      <li><a href="#produk">Varian Rasa</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+    </ul>
+    <button class="btn-primary" id="btnPesanNav">Pesan Sekarang</button>
+  </nav>
+
+  <!-- 2. HERO SECTION (Bagian Atas) -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <span class="badge">🔥 Super Enak & Super Renyah</span>
+      <h1>Sensasi Kriuk Hakiki di Setiap Gigitan!</h1>
+      <p>Dibuat dari bahan pilihan berkualitas dengan taburan bumbu rempah melimpah. Cocok untuk teman santai,teman makan, nonton, dan ngumpul bareng teman.</p>
+      <div class="hero-buttons">
+        <a href="#produk" class="btn-primary">Lihat Varian Rasa</a>
+        <a href="#testimoni" class="btn-secondary">Lihat Ulasan</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="img-placeholder"></div>
+    </div>
+  </section>
+
+  <!-- 3. PRODUK SECTION -->
+  <section id="produk" class="produk-section">
+    <h2 class="section-title">Pilihan Varian Favorit</h2>
+    <p class="section-subtitle">Temukan Varian Kripik Peyek favoritmu yang bikin nagih!</p>
+
+    <div class="grid-produk">
+      <!-- Kartu Produk 1 -->
+      <div class="card-produk">
+        <div class="card-img"> Kacang Tanah</div>
+        <div class="card-body">
+          <h3>Kacang Tanah</h3>
+          <p>Sensasi gurih rasa kacang tanah dan menyegarkan dengan aroma daun jeruk asli.</p>
+          <div class="card-footer">
+            <span class="harga">Rp 15.000</span>
+            <button class="btn-card" onclick="pilihProduk('Pedas Daun Jeruk')">Pilih</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 2 -->
+      <div class="card-produk">
+        <div class="card-img">Udang Rebon</div>
+        <div class="card-body">
+          <h3>Udang Rebon</h3>
+          <p>Sensasi gurih rasa udang rebon dan menyegarkan dengan aroma daun jeruk asli.</p>
+          <div class="card-footer">
+            <span class="harga">Rp 15.000</span>
+            <button class="btn-card" onclick="pilihProduk('Keju Bakar Spesial')">Pilih</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 3 -->
+      <div class="card-produk">
+        <div class="card-img">Kacang Hijau</div>
+        <div class="card-body">
+          <h3>Kacang Hijau</h3>
+          <p>Sensasi gurih rasa kacang hijau dan menyegarkan dengan aroma daun jeruk asli.</p>
+          <div class="card-footer">
+            <span class="harga">Rp 15.000</span>
+            <button class="btn-card" onclick="pilihProduk('Sapi Panggang Gurih')">Pilih</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TESTIMONI SECTION -->
+  <section id="testimoni" class="testimoni-section">
+    <h2 class="section-title">Apa Kata Mereka?</h2>
+    <div class="grid-testimoni">
+      <div class="card-testimoni">
+        <p>"Keripiknya renyah banget! Bumbu daun jeruknya kerasa banget gurihnya dan seger."</p>
+        <strong>- Budi, Jakarta</strong>
+      </div>
+      <div class="card-testimoni">
+        <p>"Keripiknya renyah banget! Bumbu daun jeruknya kerasa banget gurihnya dan seger."</p>
+        <strong>- Siti, Bandung</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FOOTER -->
+  <footer>
+    <p>&copy; 2026 KipikKriuk.id - Keripik Gurih & Renyah. Semua Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <!-- MODAL PEMESANAN (Pop-up) -->
+  <div id="modalPesan" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Form Pemesanan</h2>
+      <form id="formPemesanan">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+
+        <label for="varian">Varian Pilihan:</label>
+        <select id="varian">
+          <option value="Pedas Daun Jeruk">Kacang Tanah</option>
+          <option value="Keju Bakar Spesial">Udang Rebon</option>
+          <option value="Sapi Panggang Gurih">Kacang Hijau</option>
+        </select>
+
+        <label for="jumlah">Jumlah Bungkus:</label>
+        <input type="number" id="jumlah" min="1" value="1" required>
+
+        <button type="submit" class="btn-primary btn-full">Kirim via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Memanggil File JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
