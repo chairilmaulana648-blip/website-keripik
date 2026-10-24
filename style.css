@@ -319,6 +319,43 @@ input, select {
   font-family: var(--font-body);
 }
 
+.pilihan-varian {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.pilihan-varian legend {
+  padding: 0 4px;
+}
+
+.item-varian {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.item-varian label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-varian input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+}
+
+.item-varian input[type="number"] {
+  width: 76px;
+}
+
+.item-varian input:disabled {
+  background-color: #f2f2f2;
+}
+
 .btn-full {
   width: 100%;
   margin-top: 10px;

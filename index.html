@@ -56,7 +56,7 @@
           <p>Sensasi gurih rasa kacang tanah dan menyegarkan dengan aroma daun jeruk asli.</p>
           <div class="card-footer">
             <span class="harga">Rp 15.000</span>
-            <button class="btn-card" onclick="pilihProduk('Pedas Daun Jeruk')">Pilih</button>
+            <button class="btn-card" onclick="pilihProduk('Kacang Tanah')">Pilih</button>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
           <p>Sensasi gurih rasa udang rebon dan menyegarkan dengan aroma daun jeruk asli.</p>
           <div class="card-footer">
             <span class="harga">Rp 15.000</span>
-            <button class="btn-card" onclick="pilihProduk('Keju Bakar Spesial')">Pilih</button>
+            <button class="btn-card" onclick="pilihProduk('Udang Rebon')">Pilih</button>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
           <p>Sensasi gurih rasa kacang hijau dan menyegarkan dengan aroma daun jeruk asli.</p>
           <div class="card-footer">
             <span class="harga">Rp 15.000</span>
-            <button class="btn-card" onclick="pilihProduk('Sapi Panggang Gurih')">Pilih</button>
+            <button class="btn-card" onclick="pilihProduk('Kacang Hijau')">Pilih</button>
           </div>
         </div>
       </div>
@@ -118,15 +118,30 @@
         <label for="nama">Nama Lengkap:</label>
         <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
 
-        <label for="varian">Varian Pilihan:</label>
-        <select id="varian">
-          <option value="Pedas Daun Jeruk">Kacang Tanah</option>
-          <option value="Keju Bakar Spesial">Udang Rebon</option>
-          <option value="Sapi Panggang Gurih">Kacang Hijau</option>
-        </select>
-
-        <label for="jumlah">Jumlah Bungkus:</label>
-        <input type="number" id="jumlah" min="1" value="1" required>
+        <fieldset class="pilihan-varian">
+          <legend>Pilih varian dan jumlah bungkus:</legend>
+          <div class="item-varian">
+            <label for="varian-kacang-tanah">
+              <input type="checkbox" id="varian-kacang-tanah" name="varian" value="Kacang Tanah">
+              Kacang Tanah
+            </label>
+            <input type="number" id="jumlah-kacang-tanah" aria-label="Jumlah Kacang Tanah" min="1" value="1" disabled>
+          </div>
+          <div class="item-varian">
+            <label for="varian-udang-rebon">
+              <input type="checkbox" id="varian-udang-rebon" name="varian" value="Udang Rebon">
+              Udang Rebon
+            </label>
+            <input type="number" id="jumlah-udang-rebon" aria-label="Jumlah Udang Rebon" min="1" value="1" disabled>
+          </div>
+          <div class="item-varian">
+            <label for="varian-kacang-hijau">
+              <input type="checkbox" id="varian-kacang-hijau" name="varian" value="Kacang Hijau">
+              Kacang Hijau
+            </label>
+            <input type="number" id="jumlah-kacang-hijau" aria-label="Jumlah Kacang Hijau" min="1" value="1" disabled>
+          </div>
+        </fieldset>
 
         <button type="submit" class="btn-primary btn-full">Kirim via WhatsApp</button>
       </form>
