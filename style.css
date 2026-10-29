@@ -119,17 +119,6 @@ h1, h2, h3 {
   flex: 1;
 }
 
-.badge {
-  background-color: var(--kuning-keripik);
-  color: var(--cokelat-matang);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
 .hero-content h1 {
   font-size: 42px;
   margin-bottom: 15px;
@@ -359,4 +348,153 @@ input, select {
 .btn-full {
   width: 100%;
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 5%;
+  }
+
+  .nav-links {
+    order: 3;
+    flex: 0 0 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 40px 5%;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(32px, 7vw, 40px);
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .img-placeholder {
+    max-width: 450px;
+    height: 240px;
+  }
+
+  .produk-section,
+  .testimoni-section {
+    padding: 44px 5%;
+  }
+
+  .grid-produk {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 20px;
+  }
+
+  .card-testimoni {
+    max-width: 100%;
+  }
+
+  .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 4%;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .navbar > .btn-primary {
+    padding: 9px 13px;
+    font-size: 14px;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .hero-section {
+    padding: 32px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .hero-buttons a {
+    text-align: center;
+  }
+
+  .img-placeholder {
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 28px;
+  }
+
+  .grid-produk {
+    grid-template-columns: 1fr;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card-footer {
+    gap: 12px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: calc(100% - 24px);
+    padding: 24px 18px;
+  }
+
+  .item-varian {
+    gap: 8px;
+  }
+
+  .item-varian label {
+    min-width: 0;
+  }
+
+  .item-varian input[type="number"] {
+    width: 68px;
+    flex-shrink: 0;
+  }
 }

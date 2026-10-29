@@ -29,7 +29,6 @@
   <!-- 2. HERO SECTION (Bagian Atas) -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <span class="badge">🔥 Super Enak & Super Renyah</span>
       <h1>Sensasi Kriuk Hakiki di Setiap Gigitan!</h1>
       <p>Dibuat dari bahan pilihan berkualitas dengan taburan bumbu rempah melimpah. Cocok untuk teman santai,teman makan, nonton, dan ngumpul bareng teman.</p>
       <div class="hero-buttons">
@@ -50,9 +49,9 @@
     <div class="grid-produk">
       <!-- Kartu Produk 1 -->
       <div class="card-produk">
-        <div class="card-img"> Kacang Tanah</div>
+        <div class="card-img">Peyek Kacang Tanah</div>
         <div class="card-body">
-          <h3>Kacang Tanah</h3>
+          <h3>Peyek Kacang Tanah</h3>
           <p>Sensasi gurih rasa kacang tanah dan menyegarkan dengan aroma daun jeruk asli.</p>
           <div class="card-footer">
             <span class="harga">Rp 15.000</span>
@@ -63,9 +62,9 @@
 
       <!-- Kartu Produk 2 -->
       <div class="card-produk">
-        <div class="card-img">Udang Rebon</div>
+        <div class="card-img">Peyek Udang Rebon</div>
         <div class="card-body">
-          <h3>Udang Rebon</h3>
+          <h3>Peyek Udang Rebon</h3>
           <p>Sensasi gurih rasa udang rebon dan menyegarkan dengan aroma daun jeruk asli.</p>
           <div class="card-footer">
             <span class="harga">Rp 15.000</span>
@@ -76,13 +75,26 @@
 
       <!-- Kartu Produk 3 -->
       <div class="card-produk">
-        <div class="card-img">Kacang Hijau</div>
+        <div class="card-img">Peyek Kacang Hijau</div>
         <div class="card-body">
-          <h3>Kacang Hijau</h3>
+          <h3>Peyek Kacang Hijau</h3>
           <p>Sensasi gurih rasa kacang hijau dan menyegarkan dengan aroma daun jeruk asli.</p>
           <div class="card-footer">
             <span class="harga">Rp 15.000</span>
             <button class="btn-card" onclick="pilihProduk('Kacang Hijau')">Pilih</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 4 -->
+      <div class="card-produk">
+        <div class="card-img">Kripik Bawang</div>
+        <div class="card-body">
+          <h3>Kripik Bawang</h3>
+          <p>Sensasi gurih rasa bawang dan menyegarkan dengan aroma daun jeruk asli.</p>
+          <div class="card-footer">
+            <span class="harga">Rp 15.000</span>
+            <button class="btn-card" onclick="pilihProduk('Kripik Bawang')">Pilih</button>
           </div>
         </div>
       </div>
@@ -141,6 +153,12 @@
             </label>
             <input type="number" id="jumlah-kacang-hijau" aria-label="Jumlah Kacang Hijau" min="1" value="1" disabled>
           </div>
+          <div class="item-varian">
+            <label for="varian-kripik-bawang">
+              <input type="checkbox" id="varian-kripik-bawang" name="varian" value="Kripik Bawang">
+              Kripik Bawang
+            </label>
+            <input type="number" id="jumlah-kripik-bawang" aria-label="Jumlah Kripik Bawang" min="1" value="1" disabled>
         </fieldset>
 
         <button type="submit" class="btn-primary btn-full">Kirim via WhatsApp</button>
